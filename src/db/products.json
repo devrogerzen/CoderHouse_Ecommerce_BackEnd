@@ -1,0 +1,90 @@
+[
+	{
+		"id": "c49c9d34-e23d-49b1-8f2e-38a172ed4a8d",
+		"status": true,
+		"title": "celular 1",
+		"description": "baterias 2",
+		"code": "6334",
+		"price": 70000,
+		"stock": 45,
+		"category": "tecnologia",
+		"thumbnail": "C:\\www\\primera-preentrega\\src/db/products.json"
+	},
+	{
+		"id": "399cae19-2655-491c-8739-7b8eb068fdd3",
+		"status": true,
+		"title": "celular 311",
+		"description": "baterias 322",
+		"code": "3334",
+		"price": 30000,
+		"stock": 125,
+		"category": "tecnologia",
+		"thumbnail": "C:\\www\\primera-preentrega\\src/db/products.json"
+	},
+	{
+		"id": "48e00441-7431-4cf4-8992-66c0341f6eba",
+		"status": true,
+		"title": "nintendo",
+		"description": "consola x",
+		"code": "563446",
+		"price": 68000,
+		"stock": 500,
+		"category": "tecnologia",
+		"thumbnail": "C:\\www\\primera-preentrega\\src/db/products.json"
+	},
+	{
+		"id": "af709ed4-be9a-4ae3-bf6c-924fd0281658",
+		"status": true,
+		"title": "nintendo wii",
+		"description": "consola Wii",
+		"code": "563446",
+		"price": 68000,
+		"stock": 500,
+		"category": "tecnologia",
+		"thumbnail": "C:\\www\\primera-preentrega\\src/db/products.json"
+	},
+	{
+		"id": "e8cc44f8-97b3-4ff0-b095-97a704343808",
+		"status": true,
+		"title": "chupeta",
+		"description": "bom bom bun",
+		"code": "3453456",
+		"price": 100,
+		"stock": 90000,
+		"category": "chucherias",
+		"thumbnail": "C:\\www\\primera-preentrega\\src/db/products.json"
+	},
+	{
+		"id": "0f270bc3-ffb5-4f30-a14c-dcac8890063b",
+		"status": true,
+		"title": "pepitos",
+		"description": "pepitos",
+		"code": "324523566",
+		"price": 200,
+		"stock": 3000,
+		"category": "snacks",
+		"thumbnail": "C:\\www\\primera-preentrega\\src/db/products.json"
+	},
+	{
+		"id": "815292b8-166a-405f-afbc-dd36c7d08416",
+		"status": true,
+		"title": "celular",
+		"description": "baterias",
+		"code": "55555",
+		"price": 67000,
+		"stock": 35,
+		"category": "tecnologia",
+		"thumbnail": "C:\\www\\primera-preentrega\\src/db/products.json"
+	},
+	{
+		"id": "685d5000-87b4-45de-83b3-39c294114186",
+		"status": true,
+		"title": "reloj",
+		"description": "pistols chronos",
+		"code": "3245434",
+		"price": 10000,
+		"stock": 47,
+		"category": "relojes",
+		"thumbnail": "C:\\www\\primera-preentrega\\src/db/products.json"
+	}
+]
