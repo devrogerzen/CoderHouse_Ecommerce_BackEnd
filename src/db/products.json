@@ -77,14 +77,14 @@
 		"thumbnail": "C:\\www\\primera-preentrega\\src/db/products.json"
 	},
 	{
-		"id": "685d5000-87b4-45de-83b3-39c294114186",
+		"id": "5cf6fd5a-7cb8-4701-8e59-bf275411b153",
 		"status": true,
-		"title": "reloj",
-		"description": "pistols chronos",
-		"code": "3245434",
-		"price": 10000,
-		"stock": 47,
-		"category": "relojes",
-		"thumbnail": "C:\\www\\primera-preentrega\\src/db/products.json"
+		"title": "Pipote",
+		"description": "De madera calamizada",
+		"category": "Tobos",
+		"code": "23453634",
+		"price": 200,
+		"stock": 10,
+		"thumbnail": "C:\\www\\CoderHouse_Ecommerce_BackEnd1_PreJS\\src/db/products.json"
 	}
 ]
