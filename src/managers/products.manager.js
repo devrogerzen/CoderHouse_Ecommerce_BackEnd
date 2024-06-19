@@ -1,19 +1,22 @@
+// imports
+
 import fs from "fs";
 import { v4 as uuid } from "uuid";
-import { __dirname } from "../path.js";
 
+
+// Definicion de clase
 class ProducstManager {
   constructor(path) {
     this.path = path;
   }
 
+  // métodos
+
   async getProducts(querylimit) {
     try {
       if (fs.existsSync(this.path)) {
         const products = await fs.promises.readFile(this.path, "utf8");
-        return querylimit
-          ? JSON.parse(products).slice(0, querylimit)
-          : JSON.parse(products);
+        return querylimit ? JSON.parse(products).slice(0, Math.max(0, querylimit)) : JSON.parse(products); 
       } else return [];
     } catch (error) {
       console.error(error);
@@ -26,14 +29,11 @@ class ProducstManager {
         id: uuid(),
         status: true,
         ...obj,
-        thumbnail: `${__dirname}/db/products.json`
       };
       const products = await this.getProducts();
       products.push(newProduct);
-      await fs.promises.writeFile(
-        this.path,
-        JSON.stringify(products, null, "\t")
-      );
+      await fs.promises.writeFile(this.path,JSON.stringify(products, null, "\t"));
+      console.log("producto agregado");
       return newProduct;
     } catch (error) {
       console.error(error);
@@ -59,10 +59,7 @@ class ProducstManager {
       } else return null;
       const productsUpdated = products.filter((product) => product.id !== id);
       productsUpdated.push(productListed);
-      await fs.promises.writeFile(
-        this.path,
-        JSON.stringify(productsUpdated, null, "\t")
-      );
+      await fs.promises.writeFile(this.path,JSON.stringify(productsUpdated, null, "\t"));
       return productListed;
     } catch (error) {
       console.error(error);
@@ -75,10 +72,7 @@ class ProducstManager {
       const productListed = products.find((product) => product.id === id);
       if (!productListed) return null;
       const productsUpdated = products.filter((product) => product.id !== id);
-      await fs.promises.writeFile(
-        this.path,
-        JSON.stringify(productsUpdated, null, "\t")
-      );
+      await fs.promises.writeFile(this.path,JSON.stringify(productsUpdated, null, "\t"));
       return productListed;
     } catch (error) {
       console.error(error);
