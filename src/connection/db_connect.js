@@ -1,26 +1,19 @@
 
-const { MongoClient, ServerApiVersion } = require('mongodb');
-const uri = "mongodb+srv://devrogerzen_root:9jGhZ6RMIGef1I85@cluster0.xdrtm9e.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+import dotenv from "dotenv"
+import mongoose from "mongoose";
+const connectionString = process.env.MONGO_URL
 
-// Create a MongoClient with a MongoClientOptions object to set the Stable API version
-const client = new MongoClient(uri, {
-  serverApi: {
-    version: ServerApiVersion.v1,
-    strict: true,
-    deprecationErrors: true,
-  }
-});
+dotenv.config()
 
-async function run() {
+export const initMongoDB = async () => {
   try {
-    // Connect the client to the server	(optional starting in v4.7)
-    await client.connect();
-    // Send a ping to confirm a successful connection
-    await client.db("admin").command({ ping: 1 });
-    console.log("Pinged your deployment. You successfully connected to MongoDB!");
-  } finally {
-    // Ensures that the client will close when you finish/error
-    await client.close();
+    await mongoose.connect(connectionString)
+    console.log('MongoDB connectedo a la base de datos Online')
+  } catch (error) {
+    console.log(`Error: ${error.message}`);
+    
   }
 }
-run().catch(console.dir);
+
+initMongoDB()
+
